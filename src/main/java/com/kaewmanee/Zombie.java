@@ -3,6 +3,7 @@ package com.kaewmanee;
 public class Zombie {
     private String name;
     private int blood;
+    private Player player;
     public static final int attack = 5;
     public static final int height = 2;
 
@@ -29,6 +30,11 @@ public class Zombie {
         System.out.println("zombie : " + name);
         System.out.println("power attack : " + attack);
         System.out.println("blood : " + blood);
+    }
+
+    public int hited() {
+        blood -= player.getAttack();
+        return blood;
     }
 
 }

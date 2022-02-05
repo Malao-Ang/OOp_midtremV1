@@ -32,6 +32,11 @@ public class Player {
     public String getName() {
         return name;
     }
+    public int hited(){
+        blood -= zombie.getAttack();
+        return blood;
+    }
+
 
     public void showStatus() {
         System.out.println("name : " + name);
