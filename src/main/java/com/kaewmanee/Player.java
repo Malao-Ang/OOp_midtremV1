@@ -2,21 +2,36 @@ package com.kaewmanee;
 
 public class Player {
     private String name;
-    private String skin;
     private int blood;
-    private int attack;
-    public static final int health =2;
-    public Player(String name, String skin, int blood, int attack){
+    public static final int attack = 10;
+    public static final int height = 2;
+
+    public Player(String name, int blood) {
         this.name = name;
-        this.skin = skin;
         this.blood = blood;
-        this.attack = attack;
     }
-    public Player(){
+
+    public Player() {
         this.name = "Player";
-        this.skin = "steve";
-        this.attack = 10;
         this.blood = 150;
     }
-    
+
+    public void recover() {
+        blood += 5;
+    }
+
+    public int getBlood() {
+        return blood;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void showSatus() {
+        System.out.println("name : " + name);
+        System.out.println("power attack : " + attack);
+        System.out.println("blood : " + blood);
+    }
+
 }
