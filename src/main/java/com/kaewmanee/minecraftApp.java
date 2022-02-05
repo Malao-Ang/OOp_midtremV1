@@ -1,17 +1,15 @@
 package com.kaewmanee;
+import java.util.Scanner;
 
 public class minecraftApp {
-    public static void main(String[] args) {
-        Player player1 = new Player("Inw_za",100);
-        player1.showSatus();
-        
-        System.out.println();
-        player1.recover();
+    static Player player = new Player("Inw_za",100);
+    static Zombie zombie = new Zombie("bob", player);
+    static Scanner sc = new Scanner(System.in);
 
-        System.out.println();
-
-        player1.showSatus();
+    public static String input(){
+        return sc.next();
     }
+
     
     
 }

@@ -3,6 +3,7 @@ package com.kaewmanee;
 public class Player {
     private String name;
     private int blood;
+    private Zombie zombie;
     public static final int attack = 10;
     public static final int height = 2;
 
@@ -15,9 +16,13 @@ public class Player {
         this.name = "Player";
         this.blood = 150;
     }
+    public void battleWith(Zombie zombie) {
+        this.zombie = zombie;
+    }
 
-    public void recover() {
+    public int recover() {
         blood += 5;
+        return blood;
     }
 
     public int getBlood() {
@@ -28,10 +33,14 @@ public class Player {
         return name;
     }
 
-    public void showSatus() {
+    public void showStatus() {
         System.out.println("name : " + name);
         System.out.println("power attack : " + attack);
         System.out.println("blood : " + blood);
+    }
+
+    public int getAttack() {
+        return attack;
     }
 
 }
