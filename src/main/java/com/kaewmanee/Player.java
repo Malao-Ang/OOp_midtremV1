@@ -4,7 +4,7 @@ public class Player {
     private String name;
     private int blood;
     private Zombie zombie;
-    public static final int attack = 10;
+    private int attack = 10;
     public static final int height = 2;
 
     public Player(String name, int blood) {
@@ -47,5 +47,16 @@ public class Player {
     public int getAttack() {
         return attack;
     }
+    public int callSword(){
+        if(attack >=20){
+            return getAttack();
+        }
+        else{
+            attack += 10;
+            return getAttack();
+        }
+        
+    }
+    
 
 }
