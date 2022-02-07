@@ -46,5 +46,15 @@ public class Zombie {
         }
         
     }
+    public int getArmor() {
+        if(getBlood() <=100){
+            blood +=100;
+            return getBlood();
+        }
+        else{
+            return getBlood();
+        }
+
+    }
 
 }

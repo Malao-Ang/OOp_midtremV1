@@ -17,6 +17,8 @@ public class minecraftApp {
         System.out.println("  q  : Quit game");
         System.out.println("  ps : player call sword (attack +10)");
         System.out.println("  zs : zombie call sword (attack +5)");
+        System.out.println("  z_ar : zombie get armor(blood +100)");
+        System.out.println("  p_ar : player get armor(blood +100)");
         System.out.println("----------------");
         System.out.println();
     }
@@ -43,6 +45,12 @@ public class minecraftApp {
             case "zs":
                 zombie.callSword();
                 break;
+            case "p_ar":
+                player.getArmor();
+                break;
+            case "z_ar":
+                zombie.getArmor();
+                break;
             case "q":
                 System.exit(0);
             case "command":
@@ -62,6 +70,7 @@ public class minecraftApp {
             player.showStatus();
             System.out.println("---------------");
             zombie.showStatus();
+            System.out.println("*input 'command' to see the command");
             System.out.println();
 
             if(player.getBlood()<=0){
